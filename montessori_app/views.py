@@ -122,11 +122,6 @@ def logout(request):
     del request.session['fname']
     return redirect('/')
 
-# def success(request):
-#     if 'userId' not in request.session:
-#         return redirect('/')
-#     return render(request,'success.html')
-
 def createActivity(request):
     errors = Activity.objects.activity_validator(request.POST)
     if len(errors) > 0:
