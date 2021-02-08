@@ -1,0 +1,68 @@
+/* .btn-primary{
+  background-color: red !important;
+} */
+
+.site-hero .btn {
+  background: #1BB182 !important;
+
+}
+
+.btn-primary{
+  background: #1BB182;
+}
+
+a {
+  color: #1BB182;
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
+  border: 2px solid #1BB182 !important;
+}
+
+.btn.btn-primary-white {
+  border: 2px solid transparent;
+  background: #1BB182;
+}
+.btn.btn-primary-white {
+  border: 2px solid transparent;
+  background: #1BB182;
+}
+.block-22 {
+  background: #1BB182;
+}
+.block-15 .heading h2 {
+  color: #1BB182;
+}
+
+.block-18 .text strong {
+  color: #1BB182;
+}
+.block-19 .text .meta .price span {
+  background: #1BB182;
+}
+.block-19 .text .meta .number span {
+  color: #1BB182;
+}
+
+header .navbar .dropdown-menu .dropdown-item:hover {
+  background: #1BB182;
+}
+
+header .navbar .dropdown-menu .dropdown-item.active {
+  background: #1BB182;
+}
+
+.block-19 p {
+  height: 120px;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  overflow: hidden;
+}
+
+.block-19 h2{
+  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 15px;
+    width: 96%;
+}

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Montessorieffect</title>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'fonts/ionicons/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+
+
+    
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  </head>
+  <body>
+    
+    <header role="banner">
+     
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand absolute" href='/'>Montessorieffect</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href='/'>Home</a>
+              </li>
+             
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  {% for category in categoriesForHtml %}
+                  <a class="dropdown-item" href="/activities?categoryId={{category.id}}">{{category.name}}</a>
+                  {% endfor %}
+                  <!-- <a class="dropdown-item" href="#">Practical life</a>
+                  <a class="dropdown-item" href="#">Language</a>
+                  <a class="dropdown-item" href="#">Mathematics</a>
+                  <a class="dropdown-item" href="#">Cultural Studies</a> -->
+                </div>
+
+              </li>
+              <li class="nav-item">
+                {% if userForHtml.isAdmin %}
+                <a class="nav-link" href="/dashboard/admin">Dashboard</a>
+                {% endif %}
+              </li>
+            </ul>
+            
+              
+            
+            <ul class="navbar-nav absolute-right">
+             
+              <li>
+                {% if 'fname' in request.session %}
+                  Welcome {{request.session.fname}}! / <a href="/logout">Logout</a>
+                  {% else %}
+                <a href="/login">Login</a> / <a href="/register">Register</a>
+                {% endif %}
+              </li>
+              
+            </ul>
+
+
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(static/images/math6.jpg);">
+      <div class="container">
+        <div class="row align-items-center justify-content-center site-hero-inner">
+          <div class="col-md-10">
+  
+            <div class="mb-5 element-animate">
+              <div class="block-17">
+                <h2 class="heading text-center mb-4">Montessori inspired activities</h2>
+                <form action="/activities/filter" method="post" class="d-block d-lg-flex mb-4">
+                  {% csrf_token %}
+                  <div class="fields d-block d-lg-flex">
+                    <div class="textfield-search one-third"><input type="text" class="form-control" name="keyword" placeholder="Keyword search..."></div>
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="categoryId" id="" class="form-control">
+                        <option value="">Category</option>
+                        {% for category in categoriesForHtml %}
+                        <option value="{{category.id}}">{{category.name}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="age" id="" class="form-control">
+                        <option value="">Age</option>
+                        <option value="1">1-3</option>
+                        <option value="3">3-6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <input type="submit" class="search-submit btn btn-primary" value="Search">  
+                </form>
+                <p class="text-center mb-5">Fresh ideas and traditional inspiration! Be present, be intentional!</p>
+                <p class="text-center"><a href="#footer" class="btn py-3 px-5">Register Now</a></p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section element-animate">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <div class="block-16">
+              <figure>
+               
+               
+
+                <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
+
+              </figure>
+            </div>
+          </div>
+         
+          
+        </div>
+
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section pt-3 element-animate">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="media block-6 d-block">
+              <div class="icon mb-3"><span class="flaticon-book"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Practical life</h3>
+                <p>Practical Life activities are the activities of everyday life and they are involved in all aspects of life.(purposefull works like: Self, Caring for the Environment, Grace & Courtesy, cooking, ..)</p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="media block-6 d-block">
+              <div class="icon mb-3"><span class="flaticon-student"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Language</h3>
+                <p>Children from birth to age six are in the age of the absorbent mind. During this time, children are able to learn language simply by living around others who are using language. Montessori classrooms incorporate both spoken and written language into the environment to further enrich this early learning.</p>
+                
+              </div>
+            </div> 
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="media block-6 d-block">
+              <div class="icon mb-3"><span class="flaticon-diploma"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Mathematics </h3>
+                <p>In the mathematics area, the child will learn skills that will help them master math courses later on. Montessori materials are meant to be self-correcting, which helps your child become an independent learner. They can see for themselves if they made a mistake, and then correct it.</p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="media block-6 d-block">
+              <div class="icon mb-3"><span class="flaticon-professor"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Cultural Studies</h3>
+                <p>The cultural studies area is where your children will learn about the greater world around them. This area contains items pertaining to geography, history, science, art and music. </p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section bg-light element-animate" id="section-counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <figure><img src="static/images/baking.jpg" alt="Image placeholder" class="img-fluid"></figure>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <div class="block-15">
+              <div class="heading">
+                <h2>What is Montessori</h2>
+              </div>
+              <div class="text mb-5">
+                <p>As Montessori teachers and parents...</p>
+                <p>We observe our children. The child has so much to teach us about learning. By watching closely, we can modify our lessons and materials to best suit the child's interests and growth. <br>
+                  We believe that the environment itself is the best teacher, and we prepare it like a mama bird would craft a proper nest for her babies. Rather than dictating what a child should learn and when, we design the classroom or home to fit the needs of the child, rich experiences balanced by beauty and order. <br>
+                  We model grace and courtesy (good manners), treating our children as we wish ourselves to be treated. We use calm voices when teaching and speak with respect in regard to the children's feelings.<br>
+                  We recognize that children are unique individuals who are not likely to master the exact same concepts or have the same interests at the same time. We celebrate this uniqueness and allow each child to develop at his or her pace. </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="block-18 d-flex align-items-center">
+                  <div class="icon mr-4">
+                    <span class="flaticon-student"></span>
+                  </div>
+                  <div class="text">
+                    <strong class="number" data-number="{{practicalLifeCat.activities.count}}">0</strong>
+                    <span>Practical life</span>
+                  </div>
+                </div>
+
+                <div class="block-18 d-flex align-items-center">
+                  <div class="icon mr-4">
+                    <span class="flaticon-university"></span>
+                  </div>
+                  <div class="text">
+                    <strong class="number" data-number="{{language.activities.count}}">0</strong>
+                    <span>Language</span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class="block-18 d-flex align-items-center">
+                  <div class="icon mr-4">
+                    <span class="flaticon-books"></span>
+                  </div>
+                  <div class="text">
+                    <strong class="number" data-number="{{math.activities.count}}">0</strong>
+                    <span>Mathematics</span>
+                  </div>
+                </div>
+
+                <div class="block-18 d-flex align-items-center">
+                  <div class="icon mr-4">
+                    <span class="flaticon-mortarboard"></span>
+                  </div>
+                  <div class="text">
+                    <strong class="number" data-number="{{culturalStudies.activities.count}}">0</strong>
+                    <span>Cultural Studies</span>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+
+
+
+    <!-- footer -->
+
+    <div id= "footer" class="py-5 block-22">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+            <h2 class="heading">Register for our Newsletter</h2>
+            <p>Let's Montessori together!</p>
+          </div>
+          <div class="col-md-6">
+            <form action="https://gmail.us7.list-manage.com/subscribe/post?u=055b0258d3369d431ceffe936&amp;id=10f029df31" method="post" class="subscribe">
+              <div class="form-group">
+                <input type="email" class="form-control email" placeholder="Enter email">
+                <input type="submit" class="btn btn-primary submit" value="Subscribe">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="site-footer">
+      <div class="container">
+     
+         
+          
+       
+           
+        
+        <div class="row pt-5">
+          <div class="col-md-12 text-center copyright">
+            
+            
+            <p class="float-md-center">
+              <a href="#" class="fa fa-facebook p-2"></a>
+              <a href="#" class="fa fa-twitter p-2"></a>
+              <a href="#" class="fa fa-linkedin p-2"></a>
+              <a href="https://www.instagram.com/montessorieffect/" class="fa fa-instagram p-2"></a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END footer -->
+    
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/jquery-migrate-3.0.0.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/jquery.waypoints.min.js"></script>
+    <script src="static/js/jquery.stellar.min.js"></script>
+    <script src="static/js/jquery.animateNumber.min.js"></script>
+    
+    <script src="static/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="static/js/main.js"></script>
+    
+  </body>
+</html>
