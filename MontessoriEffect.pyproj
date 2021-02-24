@@ -1,0 +1,273 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>MontessoriEffect</Name>
+    <RootNamespace>MontessoriEffect</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b21ce76c-573b-4b18-bc49-d78f42ed2017</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>MontessoriEffect.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="manage.py" />
+    <Compile Include="MontessoriEffect\__init__.py" />
+    <Compile Include="MontessoriEffect\settings.py" />
+    <Compile Include="MontessoriEffect\urls.py" />
+    <Compile Include="MontessoriEffect\wsgi.py" />
+    <Compile Include="montessori_app\admin.py" />
+    <Compile Include="montessori_app\apps.py" />
+    <Compile Include="montessori_app\forms.py" />
+    <Compile Include="montessori_app\migrations\0001_initial.py" />
+    <Compile Include="montessori_app\migrations\0002_activity_category.py" />
+    <Compile Include="montessori_app\migrations\0003_activity_age.py" />
+    <Compile Include="montessori_app\migrations\0004_activity_title_image.py" />
+    <Compile Include="montessori_app\migrations\0005_auto_20210131_2342.py" />
+    <Compile Include="montessori_app\migrations\0006_user_isadmin.py" />
+    <Compile Include="montessori_app\migrations\0007_activity_document_url.py" />
+    <Compile Include="montessori_app\migrations\0008_auto_20210201_2323.py" />
+    <Compile Include="montessori_app\migrations\0009_comment.py" />
+    <Compile Include="montessori_app\migrations\__init__.py" />
+    <Compile Include="montessori_app\models.py" />
+    <Compile Include="montessori_app\tests.py" />
+    <Compile Include="montessori_app\urls.py" />
+    <Compile Include="montessori_app\views.py" />
+    <Compile Include="montessori_app\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db.sqlite3" />
+    <Content Include="images\Montessorieffect.gif" />
+    <Content Include="images\montessorieffect_titel.png" />
+    <Content Include="media\10764104096.jpg" />
+    <Content Include="media\10764104096_IZSoTWR.jpg" />
+    <Content Include="media\2910A5E6-0034-4B42-BBA6-84E436BF29A3.JPG" />
+    <Content Include="media\beads.jpg" />
+    <Content Include="media\beads.png" />
+    <Content Include="media\cleaning.jpg" />
+    <Content Include="media\cleaning_E0BZsYd.jpg" />
+    <Content Include="media\cleaning_sptBONW.jpg" />
+    <Content Include="media\cutting.jpg" />
+    <Content Include="media\cutting_4Nkoi0W.jpg" />
+    <Content Include="media\cut_fruit.jpg" />
+    <Content Include="media\CVC_words.jpg" />
+    <Content Include="media\CVC_words_N01LccE.jpg" />
+    <Content Include="media\flower.jpg" />
+    <Content Include="media\Island.pdf" />
+    <Content Include="media\Island_Ycb4fEv.pdf" />
+    <Content Include="media\math.jpg" />
+    <Content Include="media\measuring.jpg" />
+    <Content Include="media\movable_alphabet.jpg" />
+    <Content Include="media\necklace.jpg" />
+    <Content Include="media\Necklace.pdf" />
+    <Content Include="media\READ+PROG+progress+chart.pdf" />
+    <Content Include="media\READ+PROG+progress+chart_4i9JIa3.pdf" />
+    <Content Include="media\secret_box.jpg" />
+    <Content Include="media\sewing bag.jpg" />
+    <Content Include="media\sewing.pdf" />
+    <Content Include="media\sewing1.jpg" />
+    <Content Include="media\sewing1_kUYKjg3.jpg" />
+    <Content Include="media\sewing1_V274yX5.jpg" />
+    <Content Include="media\sewingBagAndSt.jpg" />
+    <Content Include="media\sewingBagAndSt_1p2uHfE.jpg" />
+    <Content Include="media\sewingBagAndSt_AWvFvn4.jpg" />
+    <Content Include="media\sewingBagAndSt_J7VyHYx.jpg" />
+    <Content Include="media\sewingBagAndSt_w9hPGzg.jpg" />
+    <Content Include="media\sewing_ipoRtfp.pdf" />
+    <Content Include="media\sewing_LuLLmSL.pdf" />
+    <Content Include="media\sewing_X7M3BrJ.pdf" />
+    <Content Include="media\unnamed %287%29.jpg" />
+    <Content Include="media\unnamed.jpg" />
+    <Content Include="montessori_app\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0002_activity_category.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0003_activity_age.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0004_activity_title_image.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0005_auto_20210131_2342.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0006_user_isadmin.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0007_activity_document_url.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0008_auto_20210201_2323.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\0009_comment.cpython-38.pyc" />
+    <Content Include="montessori_app\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="montessori_app\static\css\animate.css" />
+    <Content Include="montessori_app\static\css\bootstrap.css" />
+    <Content Include="montessori_app\static\css\bootstrap.css.map" />
+    <Content Include="montessori_app\static\css\custom.css" />
+    <Content Include="montessori_app\static\css\magnific-popup.css" />
+    <Content Include="montessori_app\static\css\owl.carousel.min.css" />
+    <Content Include="montessori_app\static\css\style.css" />
+    <Content Include="montessori_app\static\fonts\.DS_Store" />
+    <Content Include="montessori_app\static\fonts\flaticon\.DS_Store" />
+    <Content Include="montessori_app\static\fonts\flaticon\backup.txt" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\flaticon.css" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\flaticon.html" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\_flaticon.css" />
+    <Content Include="montessori_app\static\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="montessori_app\static\fonts\flaticon\license\license.pdf" />
+    <Content Include="montessori_app\static\fonts\fontawesome\css\font-awesome.min.css" />
+    <Content Include="montessori_app\static\fonts\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="montessori_app\static\fonts\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="montessori_app\static\fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="montessori_app\static\fonts\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="montessori_app\static\fonts\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="montessori_app\static\fonts\ionicons\.DS_Store" />
+    <Content Include="montessori_app\static\fonts\ionicons\cheatsheet.html" />
+    <Content Include="montessori_app\static\fonts\ionicons\css\ionicons.css" />
+    <Content Include="montessori_app\static\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="montessori_app\static\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="montessori_app\static\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="montessori_app\static\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="montessori_app\static\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="montessori_app\static\images\.DS_Store" />
+    <Content Include="montessori_app\static\images\baking.jpg" />
+    <Content Include="montessori_app\static\images\beads.jpg" />
+    <Content Include="montessori_app\static\images\beads.png" />
+    <Content Include="montessori_app\static\images\candle.jpg" />
+    <Content Include="montessori_app\static\images\cuting.jpg" />
+    <Content Include="montessori_app\static\images\cutting.jpg" />
+    <Content Include="montessori_app\static\images\cut_fruit.jpg" />
+    <Content Include="montessori_app\static\images\CVC_words.jpg" />
+    <Content Include="montessori_app\static\images\flower.jpg" />
+    <Content Include="montessori_app\static\images\flower_planting.jpg" />
+    <Content Include="montessori_app\static\images\IMG-0068.jpg" />
+    <Content Include="montessori_app\static\images\IMG-7244.PNG" />
+    <Content Include="montessori_app\static\images\IMG-8882.jpg" />
+    <Content Include="montessori_app\static\images\IMG-9305.jpg" />
+    <Content Include="montessori_app\static\images\math.jpg" />
+    <Content Include="montessori_app\static\images\math2.jpg" />
+    <Content Include="montessori_app\static\images\math3.jpg" />
+    <Content Include="montessori_app\static\images\math5.jpg" />
+    <Content Include="montessori_app\static\images\math6.jpg" />
+    <Content Include="montessori_app\static\images\movable_alphabet.jpg" />
+    <Content Include="montessori_app\static\images\necklace.jpg" />
+    <Content Include="montessori_app\static\images\pdf.png" />
+    <Content Include="montessori_app\static\images\secret_box.jpg" />
+    <Content Include="montessori_app\static\images\sewing bag.jpg" />
+    <Content Include="montessori_app\static\images\unnamed %283%29.jpg" />
+    <Content Include="montessori_app\static\images\unnamed %286%29.jpg" />
+    <Content Include="montessori_app\static\images\unnamed %287%29.jpg" />
+    <Content Include="montessori_app\static\images\unnamed %288%29.jpg" />
+    <Content Include="montessori_app\static\images\unnamed.jpg" />
+    <Content Include="montessori_app\static\images\work5.png" />
+    <Content Include="montessori_app\static\images\work6.png" />
+    <Content Include="montessori_app\static\js\bootstrap.min.js" />
+    <Content Include="montessori_app\static\js\google-map.js" />
+    <Content Include="montessori_app\static\js\jquery-3.2.1.min.js" />
+    <Content Include="montessori_app\static\js\jquery-migrate-3.0.0.js" />
+    <Content Include="montessori_app\static\js\jquery.animateNumber.min.js" />
+    <Content Include="montessori_app\static\js\jquery.magnific-popup.min.js" />
+    <Content Include="montessori_app\static\js\jquery.stellar.min.js" />
+    <Content Include="montessori_app\static\js\jquery.waypoints.min.js" />
+    <Content Include="montessori_app\static\js\main.js" />
+    <Content Include="montessori_app\static\js\owl.carousel.min.js" />
+    <Content Include="montessori_app\static\js\popper.min.js" />
+    <Content Include="montessori_app\templates\activities.html" />
+    <Content Include="montessori_app\templates\activity-single.html" />
+    <Content Include="montessori_app\templates\dashboard_add_activity.html" />
+    <Content Include="montessori_app\templates\dashboard_admin.html" />
+    <Content Include="montessori_app\templates\dashboard_edit_activity.html" />
+    <Content Include="montessori_app\templates\index.html" />
+    <Content Include="montessori_app\templates\login.html" />
+    <Content Include="montessori_app\templates\register.html" />
+    <None Include="Properties\PublishProfiles\montessorieffect - Web Deploy.pubxml" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="media\" />
+    <Folder Include="MontessoriEffect\" />
+    <Folder Include="montessori_app\" />
+    <Folder Include="montessori_app\migrations\" />
+    <Folder Include="montessori_app\migrations\__pycache__\" />
+    <Folder Include="montessori_app\static\" />
+    <Folder Include="montessori_app\static\css\" />
+    <Folder Include="montessori_app\static\fonts\" />
+    <Folder Include="montessori_app\static\fonts\flaticon\" />
+    <Folder Include="montessori_app\static\fonts\flaticon\font\" />
+    <Folder Include="montessori_app\static\fonts\flaticon\license\" />
+    <Folder Include="montessori_app\static\fonts\fontawesome\" />
+    <Folder Include="montessori_app\static\fonts\fontawesome\css\" />
+    <Folder Include="montessori_app\static\fonts\fontawesome\fonts\" />
+    <Folder Include="montessori_app\static\fonts\ionicons\" />
+    <Folder Include="montessori_app\static\fonts\ionicons\css\" />
+    <Folder Include="montessori_app\static\fonts\ionicons\fonts\" />
+    <Folder Include="montessori_app\static\images\" />
+    <Folder Include="montessori_app\static\js\" />
+    <Folder Include="montessori_app\templates\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.8</Version>
+      <Description>env (Python 3.8 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

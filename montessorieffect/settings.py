@@ -25,7 +25,7 @@ SECRET_KEY = 'bdv)--fty(p=5!64(!r9535l%$&^th$mssa$7vsrhak^=l+jgw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'montessorieffect.urls'
+ROOT_URLCONF = 'MontessoriEffect.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'montessorieffect.wsgi.application'
+WSGI_APPLICATION = 'MontessoriEffect.wsgi.application'
 
 
 # Database
@@ -117,7 +117,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+PROJECT_DIR = os.path.dirname(os.path.dirname(__file__) + '/../')
 STATIC_URL = '/static/'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
+STATIC_ROOT = PROJECT_DIR +  '/static/'

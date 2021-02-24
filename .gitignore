@@ -1,4 +1,9 @@
 media/
+obj/
+.azure/
+Properties/
+.suo
+*.pyproj.user
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
