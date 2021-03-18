@@ -122,27 +122,32 @@ def logout(request):
     del request.session['fname']
     return redirect('/')
 
+# Creates and stores a new activity in the system
 def createActivity(request):
+    
+    # Do input validation
     errors = Activity.objects.activity_validator(request.POST)
     if len(errors) > 0:
         for key, value in errors.items():
             messages.error(request, value)
         return redirect('/dashboard/admin/add/')
     else:
+        # Make sure user is admin
         user = None
         if 'userId' in request.session:
             user = User.objects.get(id=request.session['userId'])
-            
+        
+        # Do not allow non-admins or non-signed in users to upload content
         if user == None or user.isAdmin == False:
             return redirect('/')
 
-        # Upload image
+        # Upload image and store in file system storage
         myfile= request.FILES['myfile']
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         url = fs.url(filename)
 
-        # Upload pdf
+        # Upload pdf and store in file system storage
         pdfUrl = None
         if 'mypdf' in request.FILES:
             mypdf= request.FILES['mypdf']
@@ -150,6 +155,7 @@ def createActivity(request):
             filename = fs.save(mypdf.name, mypdf)
             pdfUrl = fs.url(filename)
 
+        # Check whether we need to create a new category or use an existing one
         if(request.POST['addNewCategory'] != ''):
             category= Category.objects.create(
                 name=request.POST['addNewCategory']
